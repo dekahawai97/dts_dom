@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Manipulasi DOM</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    <script>
+        const app = document.getElementById('app');
+
+        // kita bikin dulu si heading satu
+        const headingSatu = document.createElement('h1');
+        // si h1 kita kasih id dengan nama "headingPertama"
+        headingSatu.id = 'headingPertama';
+        headingSatu.innerHTML = 'Halo ini adalah heading 1';
+
+        // kita tambahkan si headingSatu ke dalam app
+        app.append(headingSatu);
+
+        // bikin element h2 
+        const headingDua = document.createElement('h2');
+        // cara memasukan class ke dalam headingDua, class "punya nama"
+        headingDua.className = 'heading-2'
+        // kita sekarang pakai append untuk nambahahin text
+        headingDua.append(' Ini adalah heading 2 dengan suatu class');
+
+        //memastikan bahwa yg diappend WAJIB suatu element
+        app.appendChild(headingDua);
+    </script>
+</body>
+</html>

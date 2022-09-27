@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM</title>
+</head>
+<body>
+    <!-- Sebuah div dengan id bernama app -->
+    <div id="app">
+        <h1 id="headingPertama"> Ini adalah heading pertama</h1>
+        <!-- H2 dengan class heading 2-->
+        <h2 class="headingkedua"> Ini adalah heading kedua</h2>
+        <h3> Ini adalah Heading tiga yg ke 1</h3>
+        <h3> Ini adalah Heading tiga yg ke 2</h3>
+    </div>
+
+    <script>
+    
+
+    // mulai seleksi dengan DOM
+    // select class pakai .
+    // select id pakai #
+    
+    // getElementById
+    const nodeH1 = document.getElementById('headingPertama');
+    console.log(nodeH1);
+    
+    // querySelector
+    const nodeH2 = document.querySelector('.headingkedua');
+    console.log(nodeH2);
+
+    // querySelectorAll
+    const nodeH3 = document.querySelectorAll('h3');
+    console.log(nodeH3);
+
+    // looping
+    nodeH3.forEach(node => {
+        // pengen cetak si innerHTML 
+        console.log(node.innerHTML);
+    });
+
+    </script>
+</body>
+</html>
